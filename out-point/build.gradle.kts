@@ -9,20 +9,12 @@ plugins {
 group = "com.barbershop"
 version = "0.0.1-SNAPSHOT"
 
-configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
-}
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation(project(":domain"))
-    implementation(project(":out-point"))
-    implementation(project(":data-provider"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

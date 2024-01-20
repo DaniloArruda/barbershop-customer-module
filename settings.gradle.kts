@@ -4,3 +4,5 @@ plugins {
 rootProject.name = "customer-module"
 include("domain")
 include("entry-point")
+include("out-point")
+include("data-provider")

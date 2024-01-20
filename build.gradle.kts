@@ -11,10 +11,6 @@ plugins {
 group = "com.barbershop"
 version = "0.0.1-SNAPSHOT"
 
-java {
-	sourceCompatibility = JavaVersion.VERSION_17
-}
-
 configurations {
 	compileOnly {
 		extendsFrom(configurations.annotationProcessor.get())
@@ -40,13 +36,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs += "-Xjsr305=strict"
-		jvmTarget = "17"
-	}
+tasks.test {
+	useJUnitPlatform()
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+kotlin {
+	jvmToolchain(21)
 }

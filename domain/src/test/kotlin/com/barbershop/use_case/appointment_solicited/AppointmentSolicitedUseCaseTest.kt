@@ -1,9 +1,5 @@
 package com.barbershop.use_case.appointment_solicited
 
-import com.barbershop.use_case.appointment_solicited.SaveAppointment
-import com.barbershop.use_case.appointment_solicited.SolicitAppointment
-import com.barbershop.use_case.appointment_solicited.AppointmentSolicitedRequest
-import com.barbershop.use_case.appointment_solicited.AppointmentSolicitedUseCase
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
